@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es" data-app="producto" data-default-theme="glass">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aquilo Pulse · La botella inteligente que te recuerda beber agua</title>
+  <meta name="description" content="Aquilo Pulse: botella inteligente con recordatorios luminosos, sensor de consumo y 24 h de frío. Oferta de lanzamiento.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='10' y='3' width='12' height='26' rx='5' fill='%2300b3c7'/%3E%3C/svg%3E">
+  <script src="../assets/core/theme-boot.js"></script>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="lp">
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <div class="promo" id="promo" role="region" aria-label="Oferta"></div>
+  <header class="site-head site-header" id="siteHead">
+    <div class="container head-in">
+      <a href="index.html" class="logo site-brand" aria-label="Aquilo, inicio"><span class="logo-mark" aria-hidden="true"></span>aquilo</a>
+      <nav class="head-nav site-nav" aria-label="Principal">
+        <a href="#beneficios">Beneficios</a><a href="#colores">Colores</a><a href="#resenas">Reseñas</a><a href="#precios">Precios</a><a href="#faq">FAQ</a><a href="seguimiento.html">Seguir pedido</a>
+      </nav>
+      <div class="site-actions"><a class="btn btn-primary btn-sm" href="checkout.html" data-buy>Comprar</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <div id="refBanner"></div>
+    <section class="hero site-hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy hero-text" data-anim>
+          <p class="badge plain hero-rating" id="heroRating"></p>
+          <h1 id="heroTitle"></h1>
+          <p class="lead" id="heroSub"></p>
+          <ul class="checks" id="heroBullets"></ul>
+          <div class="row hero-cta">
+            <a class="btn btn-primary btn-lg" href="checkout.html" data-buy>Quiero mi Aquilo →</a>
+            <div class="price-tag" id="heroPrice"></div>
+          </div>
+          <p class="micro muted" id="heroMicro"></p>
+        </div>
+        <div class="hero-visual hero-media" data-anim="zoomIn">
+          <div class="halo" aria-hidden="true"></div>
+          <span class="bubble bubble-a" aria-hidden="true">💧 +250 ml</span>
+          <span class="bubble bubble-b" aria-hidden="true">❄️ 24 h frío</span>
+          <span class="bubble bubble-c" aria-hidden="true">🔋 30 días</span>
+          <div id="heroBottle"></div>
+        </div>
+      </div>
+      <div class="container press" id="press" aria-label="Medios que han hablado de nosotros"></div>
+    </section>
+
+    <section class="section" id="beneficios">
+      <div class="container">
+        <header class="sec-head" data-anim>
+          <span class="eyebrow">Por qué Aquilo</span>
+          <h2>La hidratación, por fin, sin esfuerzo.</h2>
+          <p class="muted">El 75% de las personas vive levemente deshidratada. Aquilo convierte beber agua en un hábito que no tienes que recordar.</p>
+        </header>
+        <div class="grid-3" id="benefits"></div>
+      </div>
+    </section>
+
+    <section class="section tint" id="colores">
+      <div class="container showcase">
+        <div class="stage card" data-anim id="stage"></div>
+        <div class="stack" data-anim>
+          <span class="eyebrow">Diseño</span>
+          <h2>Elige el color que va contigo.</h2>
+          <p class="muted">Acabado mate antideslizante, 650 ml de capacidad y una silueta que cabe en cualquier portavasos.</p>
+          <fieldset class="swatches">
+            <legend>Color: <b id="colorName"></b> <span id="colorStock" class="small"></span></legend>
+            <div class="sw-row" id="swatches"></div>
+          </fieldset>
+          <dl class="specs">
+            <div><dt>Capacidad</dt><dd>650 ml</dd></div><div><dt>Peso</dt><dd>380 g</dd></div>
+            <div><dt>Batería</dt><dd>30 días</dd></div><div><dt>Resistencia</dt><dd>IPX6</dd></div>
+          </dl>
+          <div><a class="btn btn-primary" href="checkout.html" id="buyColor">Comprar en Glaciar</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sec-compare" aria-labelledby="cmpTitle">
+      <div class="container narrow">
+        <header class="sec-head center" data-anim><span class="eyebrow">Comparativa</span><h2 id="cmpTitle">Aquilo vs. otras botellas</h2></header>
+        <div class="table-wrap" data-anim><table class="table compare" id="compare"></table></div>
+      </div>
+    </section>
+
+    <section class="section tint" id="resenas">
+      <div class="container">
+        <div class="reviews-head" data-anim>
+          <div><span class="eyebrow">Reseñas verificadas</span><h2>Miles de personas ya beben mejor.</h2></div>
+          <div class="card score" id="score"></div>
+        </div>
+        <div class="grid-auto reviews" id="reviews"></div>
+        <div class="row center-row">
+          <button class="btn" type="button" id="moreReviews">Ver más reseñas</button>
+          <button class="btn btn-ghost" type="button" id="writeReview">✍️ Escribir una reseña</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="precios">
+      <div class="container">
+        <header class="sec-head center" data-anim>
+          <span class="eyebrow">Oferta de lanzamiento</span>
+          <h2>Elige tu pack y ahorra.</h2>
+          <div class="countdown" id="countdown" role="timer" aria-live="off"></div>
+        </header>
+        <div class="grid-3 plans" id="plans"></div>
+        <div class="card guarantee" data-anim id="guarantee"></div>
+      </div>
+    </section>
+
+    <section class="section tint" id="faq">
+      <div class="container narrow">
+        <header class="sec-head center" data-anim><span class="eyebrow">Preguntas frecuentes</span><h2>¿Dudas? Te respondemos.</h2></header>
+        <div class="faq" id="faqList" data-anim></div>
+      </div>
+    </section>
+
+    <section class="section final sec-final">
+      <div class="container">
+        <div class="card final-in" data-anim id="finalCta"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot site-footer">
+    <div class="container foot-grid">
+      <div class="stack">
+        <a href="index.html" class="logo"><span class="logo-mark" aria-hidden="true"></span>aquilo</a>
+        <p class="muted small">Marca y producto ficticios creados para una demo de La Gran Web. No se realizan cobros reales.</p>
+      </div>
+      <nav class="stack small" aria-label="Ayuda">
+        <b>Ayuda</b><a href="seguimiento.html">Seguimiento de pedido</a><a href="#faq">Preguntas frecuentes</a><a href="#" id="footReview">Escribir reseña</a>
+      </nav>
+      <nav class="stack small" aria-label="Empresa">
+        <b>Aquilo</b><a href="#" id="affApply">Programa de afiliados</a><a href="login.html">Acceso equipo</a><a href="admin.html">Panel admin</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a class="btn btn-primary float-buy" id="floatBuy" href="#precios" aria-hidden="true" tabindex="-1">Comprar <span id="floatPrice"></span></a>
+
+  <script type="module" src="js/public/landing.js"></script>
+  <script src="../assets/portfolio-bar.js" defer></script>
+</body>
+</html>
